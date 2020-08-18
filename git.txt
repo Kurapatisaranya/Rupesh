@@ -1,0 +1,98 @@
+Git Life Cycle:
+------------------
+
+Working Area (Local Area)---------> Staging Area---------> Local Repository ---------> Cloud Repository (GIT Hub)
+                         (git add)             (git commit)                 (git push origin)
+
+To creat new project and to push into Git hub
+=================================================
+
+1. cd c: (To enter into C directory)
+
+2. mkdir Folder name (To create new Folder)
+
+3. touch File name  (To create new Files like .txt, html , php etc.,)
+
+4. git init (To initialize Local area, so that we can access all files in local area)
+
+5. git add File name (To add particular file )
+   git add .         (To add all files present in folder at once)
+
+6. git commit -m "Any one line comment as you required" (This comment helps other team members who is author and what he commited etc.,)
+   git commit (used for multiline comment, Comment can be given in VI editor)
+
+7. git remote add origin URL(Git repository URL)
+
+8. git push origin branch name
+
+
+To clone (Pull) project 
+=================================================
+ 1. cd c: (To enter into C directory)
+
+2. mkdir Folder name (To create new Folder)
+
+3. git clone URL(Git repository URL)
+
+4. You can edit file and can repeat same process as mentioned above for pushing project in repository
+
+
+Creating Branch (Defaut branch will be Master)
+==================================================
+1. git branch branchname (To create new branch)
+
+2. git checkout branchname (To swithch master branch to new branch)
+   You can create new project and can use same procedure as mentoned above till commit
+
+3. git push origin branchname (To push project into GIT HUB)
+
+4. git branch (To check list of branches)
+
+
+Merging branches
+===================================================
+Git HUB ----------> Our project (Branches created project) ----> Code page ----> Click on Compare the pull request --->Click on merge the pull request ---> Click on Confirm Merge
+So that New branches files -------> Master (List all files (Dev1 & Dev2) in master)
+                        (Merging)
+
+To check history about commits, author, Date etcs
+=====================================================
+
+git log                    --- gives full history
+git log-p                  --- displays first latest history
+git log-3                  --- displays last 3 updates
+git log --pretty=oneline   --- displays history in one line
+git log --pretty=short     --- displays history in short form
+git log --pretty=full      --- Gives full info
+git log --pretty=fuller    --- gives author, commit details
+git log --oneline --graph  --- gives in short form of graphical representation
+git log --oneline --graph --decorate --all --- gives in graphical representaion
+
+Git tagging (To update Releases Versions to project)
+=====================================================
+
+1. git tag tagname          - To tag project with version
+2. git show tagname         - Displays project (code/ Info) in mentione version
+3. git tag tagname commitID - To tag version using commit ID
+4. git push --tags          - To push version details into GIT HUB
+
+Git Stashing (To save Work as WIP (Work in progress))
+======================================================
+
+git stash - Save work as WIP & displays old version of files
+git stash apply - Again reverts WIP and displays modified content
+
+Undo Commands
+===================================================
+git checkout --filename  - To revert changes in work area
+git reset HEAD --filename - To revert changes in staging area
+git reset HEAD~  - To revert changes after commit
+
+To config notepadd/notepadd++ as VI Editor
+====================================================
+git config --global core.edtor "notepad.exe/notepad++.exe -multiInst-nosession"
+
+To ignore Files while uploading
+===================================================
+
+ notepad++ .gitignore  ---> Enter File name or Type of Filename like !.txt or !saranya.txt etc., in Notepad++/notepad
